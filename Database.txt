@@ -1,0 +1,20 @@
+name of db: dairy
+
+table : farmer_detail
+columns:
+farmer_id
+farmer_name
+farmer_contact
+bank_account_number
+bank_name
+bank_branch
+
+table: daily_record
+columns:
+farmer_id
+date
+milk_litre
+snf
+fat
+rate
+total_t
