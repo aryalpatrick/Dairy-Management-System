@@ -1711,11 +1711,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thekakunte\\source\\repos\\dairy_app_2\\dairy_app_2\\dairy_app_2.csproj",
+      "projectUniqueName": "C:\\Users\\thekakunte\\Documents\\GitHub\\Dairy-Management-System--C--.NET-\\dairy_app_2\\dairy_app_2\\dairy_app_2.csproj",
       "projectName": "dairy_app_2",
-      "projectPath": "C:\\Users\\thekakunte\\source\\repos\\dairy_app_2\\dairy_app_2\\dairy_app_2.csproj",
+      "projectPath": "C:\\Users\\thekakunte\\Documents\\GitHub\\Dairy-Management-System--C--.NET-\\dairy_app_2\\dairy_app_2\\dairy_app_2.csproj",
       "packagesPath": "C:\\Users\\thekakunte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thekakunte\\source\\repos\\dairy_app_2\\dairy_app_2\\obj\\",
+      "outputPath": "C:\\Users\\thekakunte\\Documents\\GitHub\\Dairy-Management-System--C--.NET-\\dairy_app_2\\dairy_app_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thekakunte\\AppData\\Roaming\\NuGet\\NuGet.Config",
