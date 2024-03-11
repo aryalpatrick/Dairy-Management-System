@@ -142,6 +142,7 @@
             Controls.Add(add_farmer);
             Controls.Add(Entry_daily);
             Name = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += Form2_Load;
             ResumeLayout(false);

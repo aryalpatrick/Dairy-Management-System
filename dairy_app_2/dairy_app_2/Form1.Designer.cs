@@ -225,6 +225,7 @@ namespace dairy_app_2
             Controls.Add(farmer_id_daily);
             Controls.Add(label1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Daily Entry - Dairy Book";
             Load += Form1_Load;
             ResumeLayout(false);

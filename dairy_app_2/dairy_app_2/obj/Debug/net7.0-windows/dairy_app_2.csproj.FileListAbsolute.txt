@@ -64,3 +64,4 @@ C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.pdb
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.genruntimeconfig.cache
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\ref\dairy_app_2.dll
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Form4.resources

@@ -116,6 +116,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
             ResumeLayout(false);
             PerformLayout();

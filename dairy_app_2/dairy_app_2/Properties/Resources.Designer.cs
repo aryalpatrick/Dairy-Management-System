@@ -103,16 +103,6 @@ namespace dairy_app_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap image_removebg_preview_1 {
-            get {
-                object obj = ResourceManager.GetObject("image-removebg-preview 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap milk {
             get {
                 object obj = ResourceManager.GetObject("milk", resourceCulture);
@@ -133,16 +123,6 @@ namespace dairy_app_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap money_1 {
-            get {
-                object obj = ResourceManager.GetObject("money 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap money_11 {
             get {
                 object obj = ResourceManager.GetObject("money 11", resourceCulture);
@@ -153,9 +133,9 @@ namespace dairy_app_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap report1 {
+        internal static System.Drawing.Bitmap profile {
             get {
-                object obj = ResourceManager.GetObject("report1", resourceCulture);
+                object obj = ResourceManager.GetObject("profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +146,16 @@ namespace dairy_app_2.Properties {
         internal static System.Drawing.Bitmap report11 {
             get {
                 object obj = ResourceManager.GetObject("report11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signin {
+            get {
+                object obj = ResourceManager.GetObject("signin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
