@@ -48,6 +48,8 @@ namespace dairy_app_2
             label4 = new Label();
             label5 = new Label();
             home_btn = new Button();
+            F_name = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -149,9 +151,9 @@ namespace dairy_app_2
             label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(66, 141);
             label2.Name = "label2";
-            label2.Size = new Size(71, 22);
+            label2.Size = new Size(74, 22);
             label2.TabIndex = 13;
-            label2.Text = "Farmer id: ";
+            label2.Text = "Farmer id : ";
             label2.UseWaitCursor = true;
             label2.Click += label2_Click;
             // 
@@ -161,9 +163,9 @@ namespace dairy_app_2
             label3.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(66, 198);
             label3.Name = "label3";
-            label3.Size = new Size(89, 22);
+            label3.Size = new Size(92, 22);
             label3.TabIndex = 14;
-            label3.Text = "Milk Quantity:";
+            label3.Text = "Milk Quantity :";
             label3.UseWaitCursor = true;
             // 
             // label4
@@ -172,9 +174,9 @@ namespace dairy_app_2
             label4.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(66, 255);
             label4.Name = "label4";
-            label4.Size = new Size(60, 22);
+            label4.Size = new Size(63, 22);
             label4.TabIndex = 15;
-            label4.Text = "Fat Rate:";
+            label4.Text = "Fat Rate :";
             label4.UseWaitCursor = true;
             label4.Click += label4_Click;
             // 
@@ -184,9 +186,9 @@ namespace dairy_app_2
             label5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(66, 312);
             label5.Name = "label5";
-            label5.Size = new Size(46, 22);
+            label5.Size = new Size(49, 22);
             label5.TabIndex = 16;
-            label5.Text = "SNF %:";
+            label5.Text = "SNF % :";
             label5.UseWaitCursor = true;
             label5.Click += label5_Click;
             // 
@@ -205,11 +207,31 @@ namespace dairy_app_2
             home_btn.UseVisualStyleBackColor = true;
             home_btn.Click += home_btn_Click;
             // 
+            // F_name
+            // 
+            F_name.Location = new Point(359, 166);
+            F_name.Name = "F_name";
+            F_name.Size = new Size(150, 23);
+            F_name.TabIndex = 17;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(285, 167);
+            label6.Name = "label6";
+            label6.Size = new Size(51, 22);
+            label6.TabIndex = 18;
+            label6.Text = "Name :";
+            label6.UseWaitCursor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label6);
+            Controls.Add(F_name);
             Controls.Add(home_btn);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -248,5 +270,7 @@ namespace dairy_app_2
         private Label label4;
         private Label label5;
         private Button home_btn;
+        private TextBox F_name;
+        private Label label6;
     }
 }

@@ -2,6 +2,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dairy_app_2
 {
@@ -42,7 +43,7 @@ namespace dairy_app_2
         {
             if (farmer_id_daily.Text != "")
             {
-                String Date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                string Date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
                 string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
                 MySqlConnection con = new MySqlConnection(connstring);
@@ -73,6 +74,31 @@ namespace dairy_app_2
         private void farmer_id_daily_TextChanged(object sender, EventArgs e)
         {
 
+            if (farmer_id_daily.Text != "")
+            { 
+            string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
+            MySqlConnection conn = new MySqlConnection(connstring);
+            MySqlDataReader reader;
+
+            conn.Open();
+
+            string query = "SELECT farmer_name FROM farmer_details WHERE farmer_id = '"+farmer_id_daily.Text+"';";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    F_name.Text = Convert.ToString(reader["farmer_name"]);
+                }
+                else
+                {
+                    F_name.Text = "No farmer found";
+                }
+
+            
+
+            conn.Close();
+            }
         }
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
