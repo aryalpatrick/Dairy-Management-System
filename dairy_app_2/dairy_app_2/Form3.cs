@@ -25,7 +25,7 @@ namespace dairy_app_2
             MySqlConnection con = new MySqlConnection(connstring);
             con.Open();
 
-            string query = "INSERT into farmer_details (farmer_id,farmer_name,farmer_contact,bank_account_number,bank_name,bank_branch) VALUES('" +textBox1.Text+ "','" +textBox3.Text+ "','" + textBox4.Text + "','" +textBox2.Text+ "','" +textBox5.Text+ "','" +textBox6.Text+ "')";
+            string query = "INSERT into farmer_details (farmer_id,farmer_name,farmer_contact,bank_account_number,bank_name,bank_branch) VALUES('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + textBox6.Text + "')";
 
             MySqlCommand cmd = new MySqlCommand(query, con);
             cmd.ExecuteNonQuery();

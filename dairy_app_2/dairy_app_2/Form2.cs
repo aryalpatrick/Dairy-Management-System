@@ -30,5 +30,10 @@ namespace dairy_app_2
             f3.Show();
             Visible = false;
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

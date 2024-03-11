@@ -39,55 +39,62 @@
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(113, 47);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Id";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(100, 25);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
+            textBox2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(326, 48);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Bank Account no";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(100, 25);
             textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
+            textBox3.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.Location = new Point(114, 106);
             textBox3.Name = "textBox3";
             textBox3.PlaceholderText = "Name";
-            textBox3.Size = new Size(100, 23);
+            textBox3.Size = new Size(100, 25);
             textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
+            textBox4.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.Location = new Point(114, 162);
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "Phone Number";
-            textBox4.Size = new Size(100, 23);
+            textBox4.Size = new Size(100, 25);
             textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
+            textBox5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.Location = new Point(326, 108);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Bank Name";
-            textBox5.Size = new Size(100, 23);
+            textBox5.Size = new Size(100, 25);
             textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
+            textBox6.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.Location = new Point(327, 164);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Branch";
-            textBox6.Size = new Size(100, 23);
+            textBox6.Size = new Size(100, 25);
             textBox6.TabIndex = 5;
             // 
             // button1
             // 
+            button1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(330, 250);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);

@@ -50,9 +50,10 @@ namespace dairy_app_2
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(46, 44);
             label1.Name = "label1";
-            label1.Size = new Size(87, 15);
+            label1.Size = new Size(99, 22);
             label1.TabIndex = 0;
             label1.Text = "Daily recording";
             label1.UseWaitCursor = true;
@@ -60,58 +61,65 @@ namespace dairy_app_2
             // 
             // farmer_id_daily
             // 
+            farmer_id_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             farmer_id_daily.Location = new Point(50, 82);
             farmer_id_daily.Name = "farmer_id_daily";
             farmer_id_daily.PlaceholderText = "Farmer's ID";
-            farmer_id_daily.Size = new Size(100, 23);
+            farmer_id_daily.Size = new Size(100, 25);
             farmer_id_daily.TabIndex = 1;
             farmer_id_daily.TextChanged += farmer_id_daily_TextChanged;
             // 
             // milk_litre_daily
             // 
+            milk_litre_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             milk_litre_daily.Location = new Point(50, 129);
             milk_litre_daily.Name = "milk_litre_daily";
             milk_litre_daily.PlaceholderText = "Milk lt";
-            milk_litre_daily.Size = new Size(100, 23);
+            milk_litre_daily.Size = new Size(100, 25);
             milk_litre_daily.TabIndex = 2;
             milk_litre_daily.TextChanged += textBox2_TextChanged;
             // 
             // fat_daily
             // 
+            fat_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             fat_daily.Location = new Point(51, 173);
             fat_daily.Name = "fat_daily";
             fat_daily.PlaceholderText = "Fat";
-            fat_daily.Size = new Size(100, 23);
+            fat_daily.Size = new Size(100, 25);
             fat_daily.TabIndex = 3;
             // 
             // snf_daily
             // 
+            snf_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             snf_daily.Location = new Point(52, 217);
             snf_daily.Name = "snf_daily";
             snf_daily.PlaceholderText = "SNF";
-            snf_daily.Size = new Size(100, 23);
+            snf_daily.Size = new Size(100, 25);
             snf_daily.TabIndex = 4;
             snf_daily.TextChanged += snf_daily_TextChanged;
             // 
             // total_daily
             // 
+            total_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             total_daily.Location = new Point(270, 180);
             total_daily.Name = "total_daily";
             total_daily.PlaceholderText = "Total";
-            total_daily.Size = new Size(100, 23);
+            total_daily.Size = new Size(100, 25);
             total_daily.TabIndex = 7;
             // 
             // Rate_daily
             // 
+            Rate_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Rate_daily.Location = new Point(269, 132);
             Rate_daily.Name = "Rate_daily";
             Rate_daily.PlaceholderText = "Rate";
-            Rate_daily.Size = new Size(100, 23);
+            Rate_daily.Size = new Size(100, 25);
             Rate_daily.TabIndex = 6;
             Rate_daily.TextChanged += Rate_daily_TextChanged;
             // 
             // button_save_daily
             // 
+            button_save_daily.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button_save_daily.Location = new Point(278, 221);
             button_save_daily.Name = "button_save_daily";
             button_save_daily.Size = new Size(75, 23);
@@ -120,11 +128,28 @@ namespace dairy_app_2
             button_save_daily.UseVisualStyleBackColor = true;
             button_save_daily.Click += button1_Click;
             // 
+            // Rate_Lbl
+            // 
+            Rate_Lbl.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Rate_Lbl.Location = new Point(0, 0);
+            Rate_Lbl.Name = "Rate_Lbl";
+            Rate_Lbl.Size = new Size(100, 23);
+            Rate_Lbl.TabIndex = 12;
+            // 
+            // Total_Lbl
+            // 
+            Total_Lbl.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Total_Lbl.Location = new Point(0, 0);
+            Total_Lbl.Name = "Total_Lbl";
+            Total_Lbl.Size = new Size(100, 23);
+            Total_Lbl.TabIndex = 11;
+            // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePicker1.Location = new Point(306, 45);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(200, 25);
             dateTimePicker1.TabIndex = 10;
             // 
             // Form1
