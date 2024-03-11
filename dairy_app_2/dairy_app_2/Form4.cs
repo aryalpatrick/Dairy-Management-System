@@ -41,5 +41,10 @@ namespace dairy_app_2
                 Visible = false;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

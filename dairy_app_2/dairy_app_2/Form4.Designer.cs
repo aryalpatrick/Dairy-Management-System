@@ -34,15 +34,18 @@
             pass = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            home_btn = new Button();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // title
             // 
             title.AutoSize = true;
             title.Font = new Font("Poppins SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            title.Location = new Point(25, 25);
+            title.Location = new Point(27, 27);
             title.Name = "title";
             title.Size = new Size(230, 37);
             title.TabIndex = 2;
@@ -102,20 +105,6 @@
             label2.Text = "Password :";
             label2.UseWaitCursor = true;
             // 
-            // home_btn
-            // 
-            home_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            home_btn.Cursor = Cursors.Hand;
-            home_btn.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            home_btn.Image = Properties.Resources.profile;
-            home_btn.Location = new Point(505, 92);
-            home_btn.Margin = new Padding(0);
-            home_btn.Name = "home_btn";
-            home_btn.Size = new Size(60, 60);
-            home_btn.TabIndex = 8;
-            home_btn.TabStop = false;
-            home_btn.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -130,13 +119,38 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.cow1;
+            pictureBox1.Location = new Point(59, 104);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(330, 237);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources.profile;
+            pictureBox2.Location = new Point(505, 92);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(60, 60);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            // 
             // Form4
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
-            Controls.Add(home_btn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pass);
@@ -145,8 +159,10 @@
             Controls.Add(title);
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form4";
+            Text = "Login";
             Load += Form4_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -159,7 +175,8 @@
         private TextBox pass;
         private Label label1;
         private Label label2;
-        private Button home_btn;
         private Button button1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
