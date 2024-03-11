@@ -108,5 +108,26 @@ namespace dairy_app_2
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void home_btn_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new();   //Form1 f1 = new Form1();
+            f2.Show();
+            Visible = false;
+        }
     }
 }
