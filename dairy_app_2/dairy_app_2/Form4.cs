@@ -15,6 +15,8 @@ namespace dairy_app_2
         public Form4()
         {
             InitializeComponent();
+            pass.PasswordChar = '*';
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
