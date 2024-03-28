@@ -35,12 +35,13 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             button1 = new Button();
+            home_btn = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(113, 47);
+            textBox1.Location = new Point(142, 105);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Id";
             textBox1.Size = new Size(100, 25);
@@ -50,7 +51,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(326, 48);
+            textBox2.Location = new Point(326, 105);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Bank Account no";
             textBox2.Size = new Size(100, 25);
@@ -59,7 +60,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(114, 106);
+            textBox3.Location = new Point(142, 161);
             textBox3.Name = "textBox3";
             textBox3.PlaceholderText = "Name";
             textBox3.Size = new Size(100, 25);
@@ -68,7 +69,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(114, 162);
+            textBox4.Location = new Point(142, 217);
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "Phone Number";
             textBox4.Size = new Size(100, 25);
@@ -77,7 +78,7 @@
             // textBox5
             // 
             textBox5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(326, 108);
+            textBox5.Location = new Point(326, 161);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Bank Name";
             textBox5.Size = new Size(100, 25);
@@ -86,7 +87,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(327, 164);
+            textBox6.Location = new Point(327, 217);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Branch";
             textBox6.Size = new Size(100, 25);
@@ -95,7 +96,7 @@
             // button1
             // 
             button1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(330, 250);
+            button1.Location = new Point(332, 271);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -103,11 +104,27 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // home_btn
+            // 
+            home_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            home_btn.Cursor = Cursors.Hand;
+            home_btn.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            home_btn.Image = Properties.Resources.dairy;
+            home_btn.Location = new Point(73, 28);
+            home_btn.Margin = new Padding(0);
+            home_btn.Name = "home_btn";
+            home_btn.Size = new Size(60, 60);
+            home_btn.TabIndex = 7;
+            home_btn.TabStop = false;
+            home_btn.UseVisualStyleBackColor = true;
+            home_btn.Click += home_btn_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(home_btn);
             Controls.Add(button1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
@@ -131,5 +148,6 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private Button button1;
+        private Button home_btn;
     }
 }
