@@ -1,6 +1,6 @@
 ﻿namespace dairy_app_2
 {
-    partial class Form3
+    partial class member
     {
         /// <summary>
         /// Required designer variable.

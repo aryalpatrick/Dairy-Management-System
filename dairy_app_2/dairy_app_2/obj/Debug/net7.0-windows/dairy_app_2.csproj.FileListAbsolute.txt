@@ -48,9 +48,6 @@ C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\bin\Debug\net7.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\bin\Debug\net7.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.csproj.AssemblyReference.cache
-C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Form1.resources
-C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Form2.resources
-C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Form3.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Properties.Resources.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.csproj.GenerateResource.cache
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.GeneratedMSBuildEditorConfig.editorconfig
@@ -64,4 +61,8 @@ C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.pdb
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.genruntimeconfig.cache
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\ref\dairy_app_2.dll
-C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Form4.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Entry.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.home.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Loan.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Login.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.member.resources

@@ -6,13 +6,13 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dairy_app_2
 {
-    public partial class Form1 : Form
+    public partial class Entry : Form
     {
 
 
 
 
-        public Form1()
+        public Entry()
         {
             InitializeComponent();
 
@@ -75,17 +75,17 @@ namespace dairy_app_2
         {
 
             if (farmer_id_daily.Text != "")
-            { 
-            string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
-            MySqlConnection conn = new MySqlConnection(connstring);
-            MySqlDataReader reader;
+            {
+                string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
+                MySqlConnection conn = new MySqlConnection(connstring);
+                MySqlDataReader reader;
 
-            conn.Open();
+                conn.Open();
 
-            string query = "SELECT farmer_name FROM farmer_details WHERE farmer_id = '"+farmer_id_daily.Text+"';";
+                string query = "SELECT farmer_name FROM farmer_details WHERE farmer_id = '" + farmer_id_daily.Text + "';";
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            reader = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     F_name.Text = Convert.ToString(reader["farmer_name"]);
@@ -95,9 +95,9 @@ namespace dairy_app_2
                     F_name.Text = "No farmer found";
                 }
 
-            
 
-            conn.Close();
+
+                conn.Close();
             }
         }
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,7 +151,7 @@ namespace dairy_app_2
 
         private void home_btn_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new();   //Form1 f1 = new Form1();
+            home f2 = new();   //Form1 f1 = new Form1();
             f2.Show();
             Visible = false;
         }

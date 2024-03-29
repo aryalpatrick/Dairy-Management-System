@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dairy_app_2
 {
-    public partial class Form4 : Form
+    public partial class Login : Form
     {
-        public Form4()
+        public Login()
         {
             InitializeComponent();
             pass.PasswordChar = '*';
@@ -38,7 +38,7 @@ namespace dairy_app_2
         {
             if (username.Text == "admin" && pass.Text == "admin")
             {
-                Form2 f2 = new();   //Form1 f1 = new Form1();
+                home f2 = new();   //Form1 f1 = new Form1();
                 f2.Show();
                 Visible = false;
             }

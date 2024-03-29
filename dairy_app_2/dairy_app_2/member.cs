@@ -12,9 +12,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dairy_app_2
 {
-    public partial class Form3 : Form
+    public partial class member : Form
     {
-        public Form3()
+        public member()
         {
             InitializeComponent();
         }
@@ -46,7 +46,7 @@ namespace dairy_app_2
 
         private void home_btn_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new();   //Form1 f1 = new Form1();
+            home f2 = new();   //Form1 f1 = new Form1();
             f2.Show();
             Visible = false;
         }
