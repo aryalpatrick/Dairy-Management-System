@@ -1,7 +1,10 @@
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Tls;
 using System.Data.SqlTypes;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dairy_app_2
@@ -16,11 +19,22 @@ namespace dairy_app_2
         {
             InitializeComponent();
 
-            farmer_id_daily.KeyPress += TextBox_KeyPress;
+
+            farmer_id_daily.KeyPress += TextBox_KeyPress2;
             snf_daily.KeyPress += TextBox_KeyPress;
             fat_daily.KeyPress += TextBox_KeyPress;
             milk_litre_daily.KeyPress += TextBox_KeyPress;
 
+
+
+        }
+
+        private void Entry_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,7 +56,7 @@ namespace dairy_app_2
 
 
         {
-            if (farmer_id_daily.Text != "")
+            if (farmer_id_daily.Text != "" && milk_litre_daily.Text != "" && fat_daily.Text != "" && snf_daily.Text != "")
             {
                 string Date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
@@ -62,6 +76,11 @@ namespace dairy_app_2
                 snf_daily.Text = "";
                 Rate_daily.Text = "";
                 total_daily.Text = "";
+                F_name.Text = "";
+
+
+                farmer_id_daily.Focus();
+
 
             }
 
@@ -110,15 +129,27 @@ namespace dairy_app_2
                 e.Handled = true;
             }
         }
+        private void TextBox_KeyPress2(object sender, KeyPressEventArgs e)
+        {
+            // Allow digits, decimal separator, and backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Suppress the key press
+                e.Handled = true;
+            }
+        }
 
         private void snf_daily_TextChanged(object sender, EventArgs e)
         {
+
+
+
             if (!string.IsNullOrWhiteSpace(snf_daily.Text) && !string.IsNullOrWhiteSpace(fat_daily.Text) && !string.IsNullOrWhiteSpace(milk_litre_daily.Text))
             {
                 if (double.TryParse(snf_daily.Text, out double snf) && double.TryParse(fat_daily.Text, out double fat) && double.TryParse(milk_litre_daily.Text, out double milk))
                 {
 
-                    double rate = snf * 7.15 + fat * 7.15;
+                    double rate = snf * 4.55 + fat * 7.15;
                     Rate_daily.Text = rate.ToString();
                     double total = rate * milk;
                     total_daily.Text = total.ToString();
@@ -161,5 +192,54 @@ namespace dairy_app_2
         {
 
         }
+
+        private void fat_daily_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter && !string.IsNullOrWhiteSpace(fat_daily.Text))
+            {
+                SendKeys.Send("{TAB}");
+            }
+            else if (e.KeyData == Keys.Enter && string.IsNullOrWhiteSpace(fat_daily.Text))
+            {
+                string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
+                MySqlConnection conn = new MySqlConnection(connstring);
+                MySqlDataReader reader;
+
+                conn.Open();
+
+                string query = "SELECT fat" +
+                    " FROM daily_record WHERE farmer_id = '" + farmer_id_daily.Text + "'" +
+                    " ORDER BY date DESC" +
+                    " Limit 1;";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    fat_daily.Text = Convert.ToString(reader["fat"]);
+                }
+                conn.Close();
+
+            }
+
+
+
+        }
+
+        private void snf_daily_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter && !string.IsNullOrWhiteSpace(snf_daily.Text))
+            {
+                SendKeys.Send("{TAB}");
+            }
+            else if (e.KeyData == Keys.Enter && string.IsNullOrWhiteSpace(snf_daily.Text))
+            {
+                snf_daily.Text = "14";
+            }
+
+
+
+        }
+
     }
 }

@@ -65,6 +65,7 @@
             textBox3.PlaceholderText = "Name";
             textBox3.Size = new Size(100, 25);
             textBox3.TabIndex = 2;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 

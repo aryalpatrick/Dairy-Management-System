@@ -36,7 +36,7 @@ namespace dairy_app_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (username.Text == "admin" && pass.Text == "admin")
+            if (username.Text == "" && pass.Text == "")
             {
                 home f2 = new();   //Form1 f1 = new Form1();
                 f2.Show();

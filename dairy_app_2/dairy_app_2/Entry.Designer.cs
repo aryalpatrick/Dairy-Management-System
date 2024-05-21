@@ -73,6 +73,7 @@ namespace dairy_app_2
             farmer_id_daily.Size = new Size(100, 25);
             farmer_id_daily.TabIndex = 0;
             farmer_id_daily.TextChanged += farmer_id_daily_TextChanged;
+            farmer_id_daily.KeyDown += Entry_KeyDown;
             // 
             // milk_litre_daily
             // 
@@ -83,6 +84,7 @@ namespace dairy_app_2
             milk_litre_daily.Size = new Size(100, 25);
             milk_litre_daily.TabIndex = 1;
             milk_litre_daily.TextChanged += textBox2_TextChanged;
+            milk_litre_daily.KeyDown += Entry_KeyDown;
             // 
             // fat_daily
             // 
@@ -93,6 +95,7 @@ namespace dairy_app_2
             fat_daily.Size = new Size(100, 25);
             fat_daily.TabIndex = 2;
             fat_daily.TextChanged += fat_daily_TextChanged;
+            fat_daily.KeyDown += fat_daily_KeyDown;
             // 
             // snf_daily
             // 
@@ -103,6 +106,7 @@ namespace dairy_app_2
             snf_daily.Size = new Size(100, 25);
             snf_daily.TabIndex = 3;
             snf_daily.TextChanged += snf_daily_TextChanged;
+            snf_daily.KeyDown += snf_daily_KeyDown;
             // 
             // total_daily
             // 
@@ -138,6 +142,7 @@ namespace dairy_app_2
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.AllowDrop = true;
             dateTimePicker1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePicker1.Location = new Point(322, 111);
             dateTimePicker1.Margin = new Padding(0);
@@ -251,6 +256,7 @@ namespace dairy_app_2
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Daily Entry - Dudh Stats";
             Load += Form1_Load;
+            KeyDown += Entry_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
