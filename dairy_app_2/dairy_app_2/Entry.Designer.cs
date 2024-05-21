@@ -34,6 +34,7 @@ namespace dairy_app_2
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             farmer_id_daily = new TextBox();
             milk_litre_daily = new TextBox();
@@ -50,6 +51,8 @@ namespace dairy_app_2
             home_btn = new Button();
             F_name = new TextBox();
             label6 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -279,5 +282,9 @@ namespace dairy_app_2
         private Button home_btn;
         private TextBox F_name;
         private Label label6;
+        private DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Timer timer1;
+        private Label datetime;
+        private System.Windows.Forms.Timer timer2;
     }
 }

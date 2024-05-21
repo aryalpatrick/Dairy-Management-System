@@ -56,15 +56,25 @@ namespace dairy_app_2
 
 
         {
+            string Date = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
+
+
+            DateTime dt = DateTime.Now;
+            string time = dt.ToString("HH:mm:ss");
+            string Datentime = Date + time;
+
+
+
+
             if (farmer_id_daily.Text != "" && milk_litre_daily.Text != "" && fat_daily.Text != "" && snf_daily.Text != "")
             {
-                string Date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+
 
                 string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
                 MySqlConnection con = new MySqlConnection(connstring);
                 con.Open();
 
-                string query = "INSERT into daily_record (farmer_id,date,milk_litre,snf,fat,rate,total_t) VALUES('" + farmer_id_daily.Text + "','" + Date + "','" + milk_litre_daily.Text + "','" + snf_daily.Text + "','" + fat_daily.Text + "','" + Rate_daily.Text + "','" + total_daily.Text + "')";
+                string query = "INSERT into daily_record (farmer_id,date,milk_litre,snf,fat,rate,total_t) VALUES('" + farmer_id_daily.Text + "','" + Datentime + "','" + milk_litre_daily.Text + "','" + snf_daily.Text + "','" + fat_daily.Text + "','" + Rate_daily.Text + "','" + total_daily.Text + "')";
 
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
@@ -201,6 +211,7 @@ namespace dairy_app_2
             }
             else if (e.KeyData == Keys.Enter && string.IsNullOrWhiteSpace(fat_daily.Text))
             {
+                SendKeys.Send("{TAB}");
                 string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
                 MySqlConnection conn = new MySqlConnection(connstring);
                 MySqlDataReader reader;
@@ -234,7 +245,26 @@ namespace dairy_app_2
             }
             else if (e.KeyData == Keys.Enter && string.IsNullOrWhiteSpace(snf_daily.Text))
             {
-                snf_daily.Text = "14";
+                SendKeys.Send("{TAB}");
+                string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
+                MySqlConnection conn = new MySqlConnection(connstring);
+                MySqlDataReader reader;
+
+                conn.Open();
+
+                string query = "SELECT snf" +
+                    " FROM daily_record WHERE farmer_id = '" + farmer_id_daily.Text + "'" +
+                    " ORDER BY date DESC" +
+                    " Limit 1;";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    snf_daily.Text = Convert.ToString(reader["snf"]);
+                }
+                conn.Close();
+
             }
 
 
