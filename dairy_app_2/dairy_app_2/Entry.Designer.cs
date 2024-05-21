@@ -92,6 +92,7 @@ namespace dairy_app_2
             fat_daily.PlaceholderText = "Fat";
             fat_daily.Size = new Size(100, 25);
             fat_daily.TabIndex = 2;
+            fat_daily.TextChanged += fat_daily_TextChanged;
             // 
             // snf_daily
             // 
@@ -225,7 +226,7 @@ namespace dairy_app_2
             label6.Text = "Name :";
             label6.UseWaitCursor = true;
             // 
-            // Form1
+            // Entry
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -246,9 +247,9 @@ namespace dairy_app_2
             Controls.Add(milk_litre_daily);
             Controls.Add(farmer_id_daily);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "Entry";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Daily Entry - Dairy Book";
+            Text = "Daily Entry - Dudh Stats";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

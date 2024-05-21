@@ -16,6 +16,7 @@ namespace dairy_app_2
         {
             InitializeComponent();
 
+            farmer_id_daily.KeyPress += TextBox_KeyPress;
             snf_daily.KeyPress += TextBox_KeyPress;
             fat_daily.KeyPress += TextBox_KeyPress;
             milk_litre_daily.KeyPress += TextBox_KeyPress;
@@ -117,7 +118,7 @@ namespace dairy_app_2
                 if (double.TryParse(snf_daily.Text, out double snf) && double.TryParse(fat_daily.Text, out double fat) && double.TryParse(milk_litre_daily.Text, out double milk))
                 {
 
-                    double rate = snf * 2 + fat * 5;
+                    double rate = snf * 7.15 + fat * 7.15;
                     Rate_daily.Text = rate.ToString();
                     double total = rate * milk;
                     total_daily.Text = total.ToString();
@@ -154,6 +155,11 @@ namespace dairy_app_2
             home f2 = new();   //Form1 f1 = new Form1();
             f2.Show();
             Visible = false;
+        }
+
+        private void fat_daily_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

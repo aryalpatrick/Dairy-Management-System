@@ -31,16 +31,25 @@ namespace dairy_app_2
             Visible = false;
         }
 
-        private void Loan_Click(object sender, EventArgs e)
-        {
-            member f3 = new();   //Form1 f1 = new Form1();
-            f3.Show();
-            Visible = false;
-        }
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Loan f5 = new();   //Form1 f1 = new Form1();
+            f5.Show();
+            Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Loan f5 = new();   //Form1 f1 = new Form1();
+            f5.Show();
+            Visible = false;
         }
     }
 }

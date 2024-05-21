@@ -119,7 +119,7 @@
             home_btn.UseVisualStyleBackColor = true;
             home_btn.Click += home_btn_Click;
             // 
-            // Form3
+            // member
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -132,9 +132,9 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "Form3";
+            Name = "member";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form3";
+            Text = "Member - Dudh Stats";
             ResumeLayout(false);
             PerformLayout();
         }

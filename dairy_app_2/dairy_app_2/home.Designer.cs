@@ -35,6 +35,7 @@
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
+            home_btn = new Button();
             SuspendLayout();
             // 
             // Entry_daily
@@ -82,6 +83,7 @@
             button1.Text = "Report";
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -97,6 +99,7 @@
             button2.Text = "Loan";
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // dateTimePicker1
             // 
@@ -113,9 +116,9 @@
             label1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(105, 34);
             label1.Name = "label1";
-            label1.Size = new Size(72, 22);
+            label1.Size = new Size(74, 22);
             label1.TabIndex = 0;
-            label1.Text = "Dairy Book";
+            label1.Text = "Dudh Stats";
             label1.UseWaitCursor = true;
             // 
             // label2
@@ -129,11 +132,26 @@
             label2.Text = "Pharsatikar";
             label2.UseWaitCursor = true;
             // 
-            // Form2
+            // home_btn
+            // 
+            home_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            home_btn.Cursor = Cursors.Hand;
+            home_btn.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            home_btn.Image = Properties.Resources.dairy;
+            home_btn.Location = new Point(18, 31);
+            home_btn.Margin = new Padding(0);
+            home_btn.Name = "home_btn";
+            home_btn.Size = new Size(60, 60);
+            home_btn.TabIndex = 12;
+            home_btn.TabStop = false;
+            home_btn.UseVisualStyleBackColor = true;
+            // 
+            // home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(home_btn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
@@ -141,9 +159,9 @@
             Controls.Add(button1);
             Controls.Add(add_farmer);
             Controls.Add(Entry_daily);
-            Name = "Form2";
+            Name = "home";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Home - Dudh Stats";
             Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -158,5 +176,6 @@
         private DateTimePicker dateTimePicker1;
         private Label label1;
         private Label label2;
+        private Button home_btn;
     }
 }

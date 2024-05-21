@@ -159,7 +159,7 @@
             Controls.Add(title);
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "Login - Dudh Stats";
             Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
