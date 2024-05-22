@@ -80,16 +80,7 @@ namespace dairy_app_2
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                farmer_id_daily.Text = "";
-                milk_litre_daily.Text = "";
-                fat_daily.Text = "";
-                snf_daily.Text = "";
-                Rate_daily.Text = "";
-                total_daily.Text = "";
-                F_name.Text = "";
-
-
-                farmer_id_daily.Focus();
+                
 
 
             }
@@ -160,8 +151,11 @@ namespace dairy_app_2
                 {
 
                     double rate = snf * 4.55 + fat * 7.15;
+                    rate = Math.Round(rate, 2);
                     Rate_daily.Text = rate.ToString();
                     double total = rate * milk;
+                    total = Math.Round(total, 2);
+
                     total_daily.Text = total.ToString();
                 }
                 else
@@ -231,6 +225,8 @@ namespace dairy_app_2
                 }
                 conn.Close();
 
+                reset_btn.PerformClick();
+
             }
 
 
@@ -271,5 +267,19 @@ namespace dairy_app_2
 
         }
 
+
+        private void reset_btn_Click(object sender, EventArgs e)
+        {
+            farmer_id_daily.Text = "";
+            milk_litre_daily.Text = "";
+            fat_daily.Text = "";
+            snf_daily.Text = "";
+            Rate_daily.Text = "";
+            total_daily.Text = "";
+            F_name.Text = "";
+
+
+            farmer_id_daily.Focus();
+        }
     }
 }

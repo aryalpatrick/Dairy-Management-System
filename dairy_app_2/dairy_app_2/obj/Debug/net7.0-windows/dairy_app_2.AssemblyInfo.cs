@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dairy_app_2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b10e413c715a3bc8b7b6d10175a10e0ced9b5f7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00ae05b173d60f78ef10383cdd684c23d8ad845a")]
 [assembly: System.Reflection.AssemblyProductAttribute("dairy_app_2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dairy_app_2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

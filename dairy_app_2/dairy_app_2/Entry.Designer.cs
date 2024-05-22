@@ -53,6 +53,7 @@ namespace dairy_app_2
             label6 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             timer2 = new System.Windows.Forms.Timer(components);
+            reset_btn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -234,11 +235,22 @@ namespace dairy_app_2
             label6.Text = "Name :";
             label6.UseWaitCursor = true;
             // 
+            // reset_btn
+            // 
+            reset_btn.Location = new Point(187, 343);
+            reset_btn.Name = "reset_btn";
+            reset_btn.Size = new Size(75, 23);
+            reset_btn.TabIndex = 19;
+            reset_btn.Text = "Reset";
+            reset_btn.UseVisualStyleBackColor = true;
+            reset_btn.Click += reset_btn_Click;
+            // 
             // Entry
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(reset_btn);
             Controls.Add(label6);
             Controls.Add(F_name);
             Controls.Add(home_btn);
@@ -286,5 +298,6 @@ namespace dairy_app_2
         private System.Windows.Forms.Timer timer1;
         private Label datetime;
         private System.Windows.Forms.Timer timer2;
+        private Button reset_btn;
     }
 }
