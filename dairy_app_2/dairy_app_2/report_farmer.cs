@@ -1,20 +1,20 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
 using System.Data;
+using System.Drawing.Printing;
 
 namespace dairy_app_2
 {
     public partial class report_farmer : Form
     {
+        
         public report_farmer()
         {
             InitializeComponent();
-            dataGridView1.Dock = DockStyle.Top;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-
-
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
+
 
         private void gen_freport_btn_Click(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace dairy_app_2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
         private void dataGridView1_Cell(object sender, DataGridViewCellEventArgs e)
         {
@@ -49,7 +49,10 @@ namespace dairy_app_2
 
         private void report_farmer_Load(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Maximized;
+            int availableWidth = this.ClientSize.Width - (50);
+            int availableHeight = this.ClientSize.Height - (200);
+            dataGridView1.Size = new Size(availableWidth, availableHeight);
         }
     }
 }

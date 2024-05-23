@@ -1,4 +1,6 @@
-﻿namespace dairy_app_2
+﻿using System.Drawing.Printing;
+
+namespace dairy_app_2
 {
     partial class report_farmer
     {
@@ -6,6 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             gen_freport_btn = new Button();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
@@ -49,28 +53,31 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.ColumnHeadersHeight = 29;
+            dataGridView1.Dock = DockStyle.Top;
             dataGridView1.EditMode = DataGridViewEditMode.EditOnF2;
-            dataGridView1.Location = new Point(113, 86);
-            dataGridView1.Margin = new Padding(100, 20, 20, 100);
+            dataGridView1.Location = new Point(30, 80);
+            dataGridView1.Margin = new Padding(0, 0, 0, 38);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.RowTemplate.ReadOnly = true;
             dataGridView1.RowTemplate.Resizable = DataGridViewTriState.False;
-            dataGridView1.Size = new Size(500, 300);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Location = new Point(3, 395);
-            panel1.Margin = new Padding(0);
+            panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(30, 380);
+            panel1.Margin = new Padding(0, 38, 0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(740, 30);
+            panel1.Size = new Size(740, 40);
             panel1.TabIndex = 2;
             // 
             // report_farmer
@@ -83,7 +90,7 @@
             Controls.Add(gen_freport_btn);
             Controls.Add(dataGridView1);
             Name = "report_farmer";
-            Padding = new Padding(30, 100, 30, 20);
+            Padding = new Padding(30, 80, 30, 30);
             RightToLeftLayout = true;
             Text = "report_farmer";
             Load += report_farmer_Load;
