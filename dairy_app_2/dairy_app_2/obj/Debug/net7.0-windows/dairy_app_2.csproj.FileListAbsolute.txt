@@ -66,3 +66,4 @@ C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Loan.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Login.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.member.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.report_farmer.resources

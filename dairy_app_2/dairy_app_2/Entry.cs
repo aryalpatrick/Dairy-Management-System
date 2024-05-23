@@ -1,11 +1,4 @@
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Tls;
-using System.Data.SqlTypes;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dairy_app_2
 {
@@ -80,7 +73,7 @@ namespace dairy_app_2
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                
+
 
 
             }
