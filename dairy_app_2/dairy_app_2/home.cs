@@ -37,8 +37,8 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Loan f5 = new();   //Form1 f1 = new Form1();
-            f5.Show();
+            Report f6 = new();   //Form1 f1 = new Form1();
+            f6.Show();
             Visible = false;
         }
     }

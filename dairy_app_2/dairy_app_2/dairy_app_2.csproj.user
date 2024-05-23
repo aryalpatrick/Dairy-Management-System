@@ -16,6 +16,9 @@
     <Compile Update="Loan.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="report_farmer.cs">
       <SubType>Form</SubType>
     </Compile>
