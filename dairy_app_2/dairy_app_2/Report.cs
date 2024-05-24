@@ -23,5 +23,10 @@
             f2.Show();
             Visible = false;
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

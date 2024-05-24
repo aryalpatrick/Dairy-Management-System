@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            label2 = new Label();
-            label3 = new Label();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            tabControl1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -48,38 +50,51 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label2
+            // tabControl1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(206, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 15);
-            label2.TabIndex = 9;
-            label2.Text = "Monthly Report";
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl1.Location = new Point(152, 32);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(500, 250);
+            tabControl1.TabIndex = 11;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
-            // label3
+            // tabPage1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(416, 51);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 10;
-            label3.Text = "label3";
+            tabPage1.Location = new Point(4, 39);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(492, 207);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Monthly Report";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 39);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(492, 207);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Farmer's Report";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // Report
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(tabControl1);
             Controls.Add(button1);
             Name = "Report";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Report";
             Load += Report_Load;
+            tabControl1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -87,7 +102,8 @@
         private Label label1;
         private Button home_btn;
         private Button button1;
-        private Label label2;
-        private Label label3;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
     }
 }
