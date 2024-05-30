@@ -68,5 +68,21 @@ namespace dairy_app_2
         {
             id_changed();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_gen_Click(object sender, EventArgs e)
+        {
+            string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
+            string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
+            if(all_chk.Checked)
+            {
+
+            }
+
+        }
     }
 }

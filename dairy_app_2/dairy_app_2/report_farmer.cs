@@ -1,7 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
 using System.Data;
-using System.Drawing.Printing;
 
 namespace dairy_app_2
 {
