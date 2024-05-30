@@ -28,10 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(21, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Mnthly";
+            // 
+            // Monthly
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Name = "Monthly";
+            Size = new Size(600, 500);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

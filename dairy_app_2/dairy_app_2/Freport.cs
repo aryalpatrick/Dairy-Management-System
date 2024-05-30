@@ -16,5 +16,19 @@ namespace dairy_app_2
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Freport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
