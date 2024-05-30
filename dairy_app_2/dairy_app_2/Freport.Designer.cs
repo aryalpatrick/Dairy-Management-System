@@ -30,8 +30,7 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            F_name = new TextBox();
             label3 = new Label();
             label4 = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -44,6 +43,7 @@
             snf_chk = new CheckBox();
             fat_chk = new CheckBox();
             all_chk = new CheckBox();
+            farmer_id_daily = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -66,21 +66,12 @@
             label2.TabIndex = 2;
             label2.Text = "Farmer's id: ";
             // 
-            // textBox1
+            // F_name
             // 
-            textBox1.Location = new Point(163, 176);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(60, 26);
-            textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(439, 176);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 26);
-            textBox2.TabIndex = 5;
+            F_name.Location = new Point(439, 176);
+            F_name.Name = "F_name";
+            F_name.Size = new Size(150, 23);
+            F_name.TabIndex = 5;
             // 
             // label3
             // 
@@ -144,7 +135,7 @@
             // milk_lt_chk
             // 
             milk_lt_chk.AutoSize = true;
-            milk_lt_chk.Location = new Point(81, 351);
+            milk_lt_chk.Location = new Point(60, 343);
             milk_lt_chk.Name = "milk_lt_chk";
             milk_lt_chk.Size = new Size(83, 19);
             milk_lt_chk.TabIndex = 11;
@@ -154,7 +145,7 @@
             // rate_chk
             // 
             rate_chk.AutoSize = true;
-            rate_chk.Location = new Point(206, 347);
+            rate_chk.Location = new Point(178, 343);
             rate_chk.Name = "rate_chk";
             rate_chk.Size = new Size(83, 19);
             rate_chk.TabIndex = 12;
@@ -164,7 +155,7 @@
             // total_chk
             // 
             total_chk.AutoSize = true;
-            total_chk.Location = new Point(321, 350);
+            total_chk.Location = new Point(321, 343);
             total_chk.Name = "total_chk";
             total_chk.Size = new Size(83, 19);
             total_chk.TabIndex = 13;
@@ -174,7 +165,7 @@
             // snf_chk
             // 
             snf_chk.AutoSize = true;
-            snf_chk.Location = new Point(471, 348);
+            snf_chk.Location = new Point(471, 343);
             snf_chk.Name = "snf_chk";
             snf_chk.Size = new Size(83, 19);
             snf_chk.TabIndex = 14;
@@ -184,7 +175,7 @@
             // fat_chk
             // 
             fat_chk.AutoSize = true;
-            fat_chk.Location = new Point(592, 349);
+            fat_chk.Location = new Point(592, 343);
             fat_chk.Name = "fat_chk";
             fat_chk.Size = new Size(83, 19);
             fat_chk.TabIndex = 15;
@@ -194,18 +185,27 @@
             // all_chk
             // 
             all_chk.AutoSize = true;
-            all_chk.Location = new Point(303, 435);
+            all_chk.Location = new Point(117, 417);
             all_chk.Name = "all_chk";
             all_chk.Size = new Size(83, 19);
             all_chk.TabIndex = 16;
             all_chk.Text = "checkBox6";
             all_chk.UseVisualStyleBackColor = true;
             // 
+            // farmer_id_daily
+            // 
+            farmer_id_daily.Location = new Point(163, 176);
+            farmer_id_daily.Name = "farmer_id_daily";
+            farmer_id_daily.Size = new Size(60, 23);
+            farmer_id_daily.TabIndex = 17;
+            farmer_id_daily.TextChanged += farmer_id_daily_TextChanged;
+            // 
             // Freport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            Controls.Add(farmer_id_daily);
             Controls.Add(all_chk);
             Controls.Add(fat_chk);
             Controls.Add(snf_chk);
@@ -217,9 +217,8 @@
             Controls.Add(label5);
             Controls.Add(dateTimePicker1);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(F_name);
             Controls.Add(label3);
-            Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Freport";
@@ -233,8 +232,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox btn_fid;
+        private TextBox btn_fname;
         private Label label3;
         private Label label4;
         private DateTimePicker dateTimePicker1;
@@ -247,5 +246,7 @@
         private CheckBox snf_chk;
         private CheckBox fat_chk;
         private CheckBox all_chk;
+        private TextBox F_name;
+        private TextBox farmer_id_daily;
     }
 }

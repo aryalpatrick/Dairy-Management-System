@@ -9,6 +9,8 @@
             pnl_freport.BackColor = Color.Silver;
             pnl_monthly.BackColor = Color.Black;
             add_User_ctrl(new Monthly());
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -78,5 +80,7 @@
         private void pnl_main_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        
     }
 }

@@ -87,7 +87,11 @@ namespace dairy_app_2
 
         private void farmer_id_daily_TextChanged(object sender, EventArgs e)
         {
+            id_changed();
+        }
 
+        private void id_changed()
+        {
             if (farmer_id_daily.Text != "")
             {
                 string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
@@ -123,7 +127,7 @@ namespace dairy_app_2
                 e.Handled = true;
             }
         }
-        private void TextBox_KeyPress2(object sender, KeyPressEventArgs e)
+        public void TextBox_KeyPress2(object sender, KeyPressEventArgs e)
         {
             // Allow digits, decimal separator, and backspace
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
