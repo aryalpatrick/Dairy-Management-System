@@ -5,7 +5,7 @@ namespace dairy_app_2
     public partial class Freport : UserControl
     {
         Entry obj = new Entry();
-        String str = new String("SElECT ");
+        public string str = "SELECT ";
         public Freport()
         {
             InitializeComponent();
@@ -65,6 +65,13 @@ namespace dairy_app_2
         {
 
         }
+        private void makeItUncheck()
+        {
+            if(chk_1.Checked || chk_2.Checked || chk_3.Checked|| chk_4.Checked || chk_5.Checked)
+            {
+                chk_6.Checked = true;
+            }
+        }
 
         private void btn_gen_Click(object sender, EventArgs e)
         {
@@ -81,17 +88,41 @@ namespace dairy_app_2
             }
             else
             {
-                if (chk_1.Checked)
-                {
-                    str+="milk"
-                }
+                str += chk_1.Checked ? "milk_litre" : "";
+                str += chk_2.Checked ? ",rate" : "";
+                str += chk_3.Checked ? ",total_t" : "";
+                str += chk_4.Checked ? ",snf" : "";
+                str += chk_5.Checked ? ",fat" : "";
+
             }
+
+            str += " FROM WHERE farmer_id = '" + farmer_id_daily.Text + "'";
+            str += "AND date >= '" + Date1;
+            str += "AND date <= '" + Date2;
+
+            report_farmer f5 = new(); 
+            f5.Show();
+            Visible = false;
 
         }
 
         private void chk_2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void chk_6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_6.Checked)
+            {
+                chk_1.Checked = true;
+                chk_2.Checked = true;
+                chk_3.Checked = true;
+                chk_4.Checked = true;
+                chk_5.Checked = true;
+
+            }
+            
         }
     }
 }

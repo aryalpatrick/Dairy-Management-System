@@ -206,6 +206,7 @@
             chk_6.TabIndex = 16;
             chk_6.Text = "Check All";
             chk_6.UseVisualStyleBackColor = true;
+            chk_6.CheckedChanged += chk_6_CheckedChanged;
             // 
             // farmer_id_daily
             // 
