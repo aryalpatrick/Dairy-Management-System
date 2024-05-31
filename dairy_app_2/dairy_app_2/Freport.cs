@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace dairy_app_2
 {
     public partial class Freport : UserControl
     {
         Entry obj = new Entry();
+        String str = new String("SElECT ");
         public Freport()
         {
             InitializeComponent();
@@ -76,12 +68,29 @@ namespace dairy_app_2
 
         private void btn_gen_Click(object sender, EventArgs e)
         {
+
             string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
             string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
-            if(all_chk.Checked)
+            if (chk_6.Checked)
             {
-
+                str += "* ";
             }
+            else if (chk_6.Checked = false)
+            {
+                //make do nothing
+            }
+            else
+            {
+                if (chk_1.Checked)
+                {
+                    str+="milk"
+                }
+            }
+
+        }
+
+        private void chk_2_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

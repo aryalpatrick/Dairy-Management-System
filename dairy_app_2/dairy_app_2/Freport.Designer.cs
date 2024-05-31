@@ -37,12 +37,12 @@
             label5 = new Label();
             label6 = new Label();
             dateTimePicker2 = new DateTimePicker();
-            milk_lt_chk = new CheckBox();
-            rate_chk = new CheckBox();
-            total_chk = new CheckBox();
-            snf_chk = new CheckBox();
-            fat_chk = new CheckBox();
-            all_chk = new CheckBox();
+            chk_1 = new CheckBox();
+            chk_2 = new CheckBox();
+            chk_3 = new CheckBox();
+            chk_4 = new CheckBox();
+            chk_5 = new CheckBox();
+            chk_6 = new CheckBox();
             farmer_id_daily = new TextBox();
             btn_gen = new Button();
             SuspendLayout();
@@ -134,78 +134,78 @@
             dateTimePicker2.Size = new Size(200, 23);
             dateTimePicker2.TabIndex = 9;
             // 
-            // milk_lt_chk
+            // chk_1
             // 
-            milk_lt_chk.AutoSize = true;
-            milk_lt_chk.Checked = true;
-            milk_lt_chk.CheckState = CheckState.Checked;
-            milk_lt_chk.Location = new Point(60, 343);
-            milk_lt_chk.Name = "milk_lt_chk";
-            milk_lt_chk.Size = new Size(72, 19);
-            milk_lt_chk.TabIndex = 11;
-            milk_lt_chk.Text = "Milk litre";
-            milk_lt_chk.UseVisualStyleBackColor = true;
+            chk_1.AutoSize = true;
+            chk_1.Checked = true;
+            chk_1.CheckState = CheckState.Checked;
+            chk_1.Location = new Point(60, 343);
+            chk_1.Name = "chk_1";
+            chk_1.Size = new Size(72, 19);
+            chk_1.TabIndex = 11;
+            chk_1.Text = "Milk litre";
+            chk_1.UseVisualStyleBackColor = true;
             // 
-            // rate_chk
+            // chk_2
             // 
-            rate_chk.AutoSize = true;
-            rate_chk.Checked = true;
-            rate_chk.CheckState = CheckState.Checked;
-            rate_chk.Location = new Point(178, 343);
-            rate_chk.Name = "rate_chk";
-            rate_chk.Size = new Size(49, 19);
-            rate_chk.TabIndex = 12;
-            rate_chk.Text = "Rate";
-            rate_chk.UseVisualStyleBackColor = true;
+            chk_2.AutoSize = true;
+            chk_2.Checked = true;
+            chk_2.CheckState = CheckState.Checked;
+            chk_2.Location = new Point(178, 343);
+            chk_2.Name = "chk_2";
+            chk_2.Size = new Size(49, 19);
+            chk_2.TabIndex = 12;
+            chk_2.Text = "Rate";
+            chk_2.UseVisualStyleBackColor = true;
+            chk_2.CheckedChanged += chk_2_CheckedChanged;
             // 
-            // total_chk
+            // chk_3
             // 
-            total_chk.AutoSize = true;
-            total_chk.Checked = true;
-            total_chk.CheckState = CheckState.Checked;
-            total_chk.Cursor = Cursors.Default;
-            total_chk.Location = new Point(321, 343);
-            total_chk.Name = "total_chk";
-            total_chk.Size = new Size(51, 19);
-            total_chk.TabIndex = 13;
-            total_chk.Text = "Total";
-            total_chk.UseVisualStyleBackColor = true;
+            chk_3.AutoSize = true;
+            chk_3.Checked = true;
+            chk_3.CheckState = CheckState.Checked;
+            chk_3.Location = new Point(321, 343);
+            chk_3.Name = "chk_3";
+            chk_3.Size = new Size(51, 19);
+            chk_3.TabIndex = 13;
+            chk_3.Text = "Total";
+            chk_3.UseVisualStyleBackColor = true;
             // 
-            // snf_chk
+            // chk_4
             // 
-            snf_chk.AutoSize = true;
-            snf_chk.Checked = true;
-            snf_chk.CheckState = CheckState.Checked;
-            snf_chk.Location = new Point(471, 343);
-            snf_chk.Name = "snf_chk";
-            snf_chk.Size = new Size(43, 19);
-            snf_chk.TabIndex = 14;
-            snf_chk.Text = "Snf";
-            snf_chk.UseVisualStyleBackColor = true;
+            chk_4.AutoSize = true;
+            chk_4.Checked = true;
+            chk_4.CheckState = CheckState.Checked;
+            chk_4.Location = new Point(471, 343);
+            chk_4.Name = "chk_4";
+            chk_4.Size = new Size(43, 19);
+            chk_4.TabIndex = 14;
+            chk_4.Text = "Snf";
+            chk_4.UseVisualStyleBackColor = true;
             // 
-            // fat_chk
+            // chk_5
             // 
-            fat_chk.AutoSize = true;
-            fat_chk.Checked = true;
-            fat_chk.CheckState = CheckState.Checked;
-            fat_chk.Location = new Point(592, 343);
-            fat_chk.Name = "fat_chk";
-            fat_chk.Size = new Size(42, 19);
-            fat_chk.TabIndex = 15;
-            fat_chk.Text = "Fat";
-            fat_chk.UseVisualStyleBackColor = true;
+            chk_5.AutoSize = true;
+            chk_5.Checked = true;
+            chk_5.CheckState = CheckState.Checked;
+            chk_5.Location = new Point(592, 343);
+            chk_5.Name = "chk_5";
+            chk_5.Size = new Size(42, 19);
+            chk_5.TabIndex = 15;
+            chk_5.Text = "Fat";
+            chk_5.UseVisualStyleBackColor = true;
             // 
-            // all_chk
+            // chk_6
             // 
-            all_chk.AutoSize = true;
-            all_chk.Checked = true;
-            all_chk.CheckState = CheckState.Checked;
-            all_chk.Location = new Point(118, 397);
-            all_chk.Name = "all_chk";
-            all_chk.Size = new Size(76, 19);
-            all_chk.TabIndex = 16;
-            all_chk.Text = "Check All";
-            all_chk.UseVisualStyleBackColor = true;
+            chk_6.AutoSize = true;
+            chk_6.Checked = true;
+            chk_6.CheckState = CheckState.Checked;
+            chk_6.Location = new Point(118, 397);
+            chk_6.Name = "chk_6";
+            chk_6.Size = new Size(76, 19);
+            chk_6.TabIndex = 16;
+            chk_6.Text = "Check All";
+            chk_6.UseVisualStyleBackColor = true;
             // 
             // farmer_id_daily
             // 
@@ -232,12 +232,12 @@
             BackColor = SystemColors.Control;
             Controls.Add(btn_gen);
             Controls.Add(farmer_id_daily);
-            Controls.Add(all_chk);
-            Controls.Add(fat_chk);
-            Controls.Add(snf_chk);
-            Controls.Add(total_chk);
-            Controls.Add(rate_chk);
-            Controls.Add(milk_lt_chk);
+            Controls.Add(chk_6);
+            Controls.Add(chk_5);
+            Controls.Add(chk_4);
+            Controls.Add(chk_3);
+            Controls.Add(chk_2);
+            Controls.Add(chk_1);
             Controls.Add(label6);
             Controls.Add(dateTimePicker2);
             Controls.Add(label5);
@@ -247,7 +247,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Cursor = Cursors.Default;
             Name = "Freport";
             Size = new Size(900, 500);
             Load += Freport_Load;
@@ -267,12 +266,12 @@
         private Label label5;
         private Label label6;
         private DateTimePicker dateTimePicker2;
-        private CheckBox milk_lt_chk;
-        private CheckBox rate_chk;
-        private CheckBox total_chk;
-        private CheckBox snf_chk;
-        private CheckBox fat_chk;
-        private CheckBox all_chk;
+        public CheckBox chk_1;
+        private CheckBox chk_2;
+        private CheckBox chk_3;
+        private CheckBox chk_4;
+        private CheckBox chk_5;
+        private CheckBox chk_6;
         private TextBox F_name;
         private TextBox farmer_id_daily;
         private Button btn_gen;
