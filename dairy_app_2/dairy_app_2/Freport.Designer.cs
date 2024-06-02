@@ -145,6 +145,7 @@
             chk_1.TabIndex = 11;
             chk_1.Text = "Milk litre";
             chk_1.UseVisualStyleBackColor = true;
+            chk_1.CheckedChanged += chk_1_CheckedChanged;
             // 
             // chk_2
             // 
@@ -170,6 +171,7 @@
             chk_3.TabIndex = 13;
             chk_3.Text = "Total";
             chk_3.UseVisualStyleBackColor = true;
+            chk_3.CheckedChanged += chk_3_CheckedChanged;
             // 
             // chk_4
             // 
@@ -182,6 +184,7 @@
             chk_4.TabIndex = 14;
             chk_4.Text = "Snf";
             chk_4.UseVisualStyleBackColor = true;
+            chk_4.CheckedChanged += chk_4_CheckedChanged;
             // 
             // chk_5
             // 
@@ -194,6 +197,7 @@
             chk_5.TabIndex = 15;
             chk_5.Text = "Fat";
             chk_5.UseVisualStyleBackColor = true;
+            chk_5.CheckedChanged += chk_5_CheckedChanged;
             // 
             // chk_6
             // 

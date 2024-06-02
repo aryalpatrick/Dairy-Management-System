@@ -65,9 +65,13 @@ namespace dairy_app_2
         {
 
         }
-        private void makeItUncheck()
+        private void makeItCheck()
         {
-            if(chk_1.Checked || chk_2.Checked || chk_3.Checked|| chk_4.Checked || chk_5.Checked)
+            if (chk_1.Checked == false || chk_2.Checked == false || chk_3.Checked == false || chk_4.Checked == false || chk_5.Checked)
+            {
+                chk_6.Checked = false;
+            }
+            else if (chk_1.Checked == true && chk_2.Checked && true && chk_3.Checked == true && chk_4.Checked == true && chk_5.Checked)
             {
                 chk_6.Checked = true;
             }
@@ -78,13 +82,13 @@ namespace dairy_app_2
 
             string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
             string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
-            if (chk_6.Checked)
+            if (chk_6.Checked == false)
+            {
+                return;
+            }
+            else if (chk_6.Checked == true) 
             {
                 str += "* ";
-            }
-            else if (chk_6.Checked = false)
-            {
-                //make do nothing
             }
             else
             {
@@ -100,29 +104,58 @@ namespace dairy_app_2
             str += "AND date >= '" + Date1;
             str += "AND date <= '" + Date2;
 
-            report_farmer f5 = new(); 
+            report_farmer f5 = new();
             f5.Show();
             Visible = false;
 
         }
 
-        private void chk_2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void chk_6_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk_6.Checked)
-            {
-                chk_1.Checked = true;
-                chk_2.Checked = true;
-                chk_3.Checked = true;
-                chk_4.Checked = true;
-                chk_5.Checked = true;
+            makeItCheck();
+            check_check();
+        }
 
-            }
-            
+        private void chk_1_CheckedChanged(object sender, EventArgs e)
+        {
+            check_check();
+        }
+        private void chk_2_CheckedChanged(object sender, EventArgs e)
+        {
+            makeItCheck();
+            check_check();
+        }
+
+        private void chk_3_CheckedChanged(object sender, EventArgs e)
+        {
+            makeItCheck();
+            check_check();
+        }
+
+        private void chk_4_CheckedChanged(object sender, EventArgs e)
+        {
+            makeItCheck();
+            check_check();
+        }
+
+        private void chk_5_CheckedChanged(object sender, EventArgs e)
+        {
+            makeItCheck();
+            check_check();
+        }
+        private void check_check()
+        {
+                if (chk_6.Checked)
+                {
+                    chk_1.Checked = true;
+                    chk_2.Checked = true;
+                    chk_3.Checked = true;
+                    chk_4.Checked = true;
+                    chk_5.Checked = true;
+
+                }
+
         }
     }
 }
