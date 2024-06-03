@@ -78,6 +78,7 @@ namespace dairy_app_2
 
             }
 
+            reset_btn.PerformClick();
         }
 
         private void Rate_daily_TextChanged(object sender, EventArgs e)
