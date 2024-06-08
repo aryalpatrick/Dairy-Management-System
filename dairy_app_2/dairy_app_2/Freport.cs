@@ -5,7 +5,7 @@ namespace dairy_app_2
     public partial class Freport : UserControl
     {
         Entry obj = new Entry();
-        public string str = "SELECT ";
+        public var str = "SELECT ";
         public Freport()
         {
             InitializeComponent();
@@ -97,7 +97,7 @@ namespace dairy_app_2
 
             label4.Text = str;
 
-            String strq = str;
+            
 
 
             report_farmer f5 = new();
@@ -105,6 +105,11 @@ namespace dairy_app_2
             Visible = false;
             
 
+        }
+        public String Sttt()
+        {
+            string strr = str;
+            return strr;
         }
 
 

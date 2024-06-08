@@ -5,7 +5,7 @@ namespace dairy_app_2
 {
     public partial class report_farmer : Form
     {
-
+        Freport fobj = new Freport();
         public report_farmer()
         {
             InitializeComponent();
@@ -19,7 +19,7 @@ namespace dairy_app_2
         private void gen_freport_btn_Click(object sender, EventArgs e)
         {
 
-            Freport fobj = new Freport();
+            
 
             string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
             MySqlConnection conn = new MySqlConnection(connstring);
@@ -27,8 +27,8 @@ namespace dairy_app_2
 
             conn.Open();
 
-            string str = fobj.strq;
-            string query = str;
+            string strr = fobj.Sttt();
+            string query = strr;
 
             textBox1.Text = query;
 
