@@ -5,18 +5,21 @@ namespace dairy_app_2
 {
     public partial class report_farmer : Form
     {
-        
+
         public report_farmer()
         {
             InitializeComponent();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
         }
 
 
         private void gen_freport_btn_Click(object sender, EventArgs e)
         {
 
+            Freport fobj = new Freport();
 
             string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
             MySqlConnection conn = new MySqlConnection(connstring);
@@ -24,21 +27,26 @@ namespace dairy_app_2
 
             conn.Open();
 
-            string query = "Select * FROM daily_record";
+            string str = fobj.strq;
+            string query = str;
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            textBox1.Text = query;
+
+
+      /*      MySqlCommand cmd = new MySqlCommand(query, conn);
             reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Load(reader);
             dataGridView1.DataSource = dt;
+      */
 
             conn.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
         private void dataGridView1_Cell(object sender, DataGridViewCellEventArgs e)
         {

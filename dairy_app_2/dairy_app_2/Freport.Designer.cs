@@ -89,11 +89,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlDarkDark;
             label4.Location = new Point(28, 230);
             label4.Name = "label4";
-            label4.Size = new Size(82, 32);
+            label4.Size = new Size(51, 20);
             label4.TabIndex = 6;
             label4.Text = "Filters:";
             // 
@@ -103,6 +103,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 7;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label5
             // 
@@ -123,9 +124,9 @@
             label6.ForeColor = SystemColors.ControlDarkDark;
             label6.Location = new Point(422, 280);
             label6.Name = "label6";
-            label6.Size = new Size(74, 32);
+            label6.Size = new Size(44, 32);
             label6.TabIndex = 10;
-            label6.Text = "From:";
+            label6.Text = "To:";
             // 
             // dateTimePicker2
             // 
@@ -133,6 +134,7 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(200, 23);
             dateTimePicker2.TabIndex = 9;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // chk_1
             // 

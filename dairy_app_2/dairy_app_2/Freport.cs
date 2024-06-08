@@ -71,11 +71,12 @@ namespace dairy_app_2
 
             string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
             string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
-            if (chk_6.Checked == false)
+      /*      if (chk_6.Checked == false)
             {
                 return;
             }
-            else if (chk_6.Checked == true) 
+      */
+            if(chk_6.Checked == true)
             {
                 str += "* ";
             }
@@ -89,13 +90,20 @@ namespace dairy_app_2
 
             }
 
-            str += " FROM WHERE farmer_id = '" + farmer_id_daily.Text + "'";
-            str += "AND date >= '" + Date1;
-            str += "AND date <= '" + Date2;
+            str += " FROM daily_record WHERE farmer_id = '" + farmer_id_daily.Text + "'";
+            str += " AND date >= '" + Date1+"'";
+            str += " AND date <= '" + Date2+"'";
+
+
+            label4.Text = str;
+
+            String strq = str;
+
 
             report_farmer f5 = new();
             f5.Show();
             Visible = false;
+            
 
         }
 
@@ -110,32 +118,54 @@ namespace dairy_app_2
                 chk_4.Checked = true;
                 chk_5.Checked = true;
             }
-            
+
         }
 
         private void chk_1_CheckedChanged(object sender, EventArgs e)
         {
-            
+            check();
         }
         private void chk_2_CheckedChanged(object sender, EventArgs e)
         {
-            
+            check();
         }
 
         private void chk_3_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void chk_4_CheckedChanged(object sender, EventArgs e)
         {
-            
+            check();
         }
 
         private void chk_5_CheckedChanged(object sender, EventArgs e)
         {
-           
+            check();
+        }
+        private void check()
+        {
+            if (chk_1.Checked && chk_2.Checked && chk_3.Checked && chk_4.Checked && chk_5.Checked)
+            {
+                chk_6.Checked = true;
+            }
+
+            if (chk_1.Checked == false || chk_2.Checked == false || chk_3.Checked == false || chk_4.Checked == false || chk_5.Checked == false)
+            {
+                chk_6.Checked = false;
+            }
+
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

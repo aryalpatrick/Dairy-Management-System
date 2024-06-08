@@ -31,10 +31,10 @@ namespace dairy_app_2
         /// </summary>
         private void InitializeComponent()
         {
-
             gen_freport_btn = new Button();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -66,9 +66,9 @@ namespace dairy_app_2
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.RowTemplate.ReadOnly = true;
             dataGridView1.RowTemplate.Resizable = DataGridViewTriState.False;
+            dataGridView1.Size = new Size(740, 150);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            
             // 
             // panel1
             // 
@@ -80,12 +80,20 @@ namespace dairy_app_2
             panel1.Size = new Size(740, 40);
             panel1.TabIndex = 2;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(190, 25);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 3;
+            // 
             // report_farmer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
             Controls.Add(panel1);
             Controls.Add(gen_freport_btn);
             Controls.Add(dataGridView1);
@@ -96,6 +104,7 @@ namespace dairy_app_2
             Load += report_farmer_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -103,5 +112,6 @@ namespace dairy_app_2
         private DataGridView dataGridView1;
         private Button gen_freport_btn;
         private Panel panel1;
+        private TextBox textBox1;
     }
 }
