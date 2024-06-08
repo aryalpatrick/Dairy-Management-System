@@ -65,17 +65,6 @@ namespace dairy_app_2
         {
 
         }
-        private void makeItCheck()
-        {
-            if (chk_1.Checked == false || chk_2.Checked == false || chk_3.Checked == false || chk_4.Checked == false || chk_5.Checked)
-            {
-                chk_6.Checked = false;
-            }
-            else if (chk_1.Checked == true && chk_2.Checked && true && chk_3.Checked == true && chk_4.Checked == true && chk_5.Checked)
-            {
-                chk_6.Checked = true;
-            }
-        }
 
         private void btn_gen_Click(object sender, EventArgs e)
         {
@@ -113,49 +102,40 @@ namespace dairy_app_2
 
         private void chk_6_CheckedChanged(object sender, EventArgs e)
         {
-            makeItCheck();
-            check_check();
+            if (chk_6.Checked)
+            {
+                chk_1.Checked = true;
+                chk_2.Checked = true;
+                chk_3.Checked = true;
+                chk_4.Checked = true;
+                chk_5.Checked = true;
+            }
+            
         }
 
         private void chk_1_CheckedChanged(object sender, EventArgs e)
         {
-            check_check();
+            
         }
         private void chk_2_CheckedChanged(object sender, EventArgs e)
         {
-            makeItCheck();
-            check_check();
+            
         }
 
         private void chk_3_CheckedChanged(object sender, EventArgs e)
         {
-            makeItCheck();
-            check_check();
+            
         }
 
         private void chk_4_CheckedChanged(object sender, EventArgs e)
         {
-            makeItCheck();
-            check_check();
+            
         }
 
         private void chk_5_CheckedChanged(object sender, EventArgs e)
         {
-            makeItCheck();
-            check_check();
+           
         }
-        private void check_check()
-        {
-                if (chk_6.Checked)
-                {
-                    chk_1.Checked = true;
-                    chk_2.Checked = true;
-                    chk_3.Checked = true;
-                    chk_4.Checked = true;
-                    chk_5.Checked = true;
 
-                }
-
-        }
     }
 }
