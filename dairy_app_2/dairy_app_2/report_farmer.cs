@@ -1,47 +1,30 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using System.Text;
 
 namespace dairy_app_2
 {
     public partial class report_farmer : Form
     {
-        Freport fobj = new Freport();
-        public report_farmer()
+        private readonly Freport fobj;
+
+        public report_farmer(Freport freport)
         {
             InitializeComponent();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            fobj = freport;
 
 
         }
 
 
+
+
         private void gen_freport_btn_Click(object sender, EventArgs e)
         {
 
-            
 
-            string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
-            MySqlConnection conn = new MySqlConnection(connstring);
-            MySqlDataReader reader;
-
-            conn.Open();
-
-            string strr = fobj.Sttt();
-            string query = strr;
-
-            textBox1.Text = query;
-
-
-      /*      MySqlCommand cmd = new MySqlCommand(query, conn);
-            reader = cmd.ExecuteReader();
-
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dataGridView1.DataSource = dt;
-      */
-
-            conn.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,6 +42,33 @@ namespace dairy_app_2
             int availableWidth = this.ClientSize.Width - (50);
             int availableHeight = this.ClientSize.Height - (200);
             dataGridView1.Size = new Size(availableWidth, availableHeight);
+
+
+            string connstring = "server=localhost;uid=root;pwd=SecuredPassword@123;database=dairy";
+            MySqlConnection conn = new MySqlConnection(connstring);
+            MySqlDataReader reader;
+
+            conn.Open();
+
+
+
+
+
+            string query = fobj.QueryString;
+
+
+
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dataGridView1.DataSource = dt;
+
+
+            conn.Close();
+
         }
     }
 }

@@ -141,6 +141,7 @@
             chk_1.AutoSize = true;
             chk_1.Checked = true;
             chk_1.CheckState = CheckState.Checked;
+            chk_1.Enabled = false;
             chk_1.Location = new Point(60, 343);
             chk_1.Name = "chk_1";
             chk_1.Size = new Size(72, 19);
@@ -260,6 +261,8 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+
 
         #endregion
 

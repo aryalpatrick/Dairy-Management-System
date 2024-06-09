@@ -1,17 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Text;
 
 namespace dairy_app_2
 {
     public partial class Freport : UserControl
     {
         Entry obj = new Entry();
-        public var str = "SELECT ";
+        private StringBuilder _str;
+
         public Freport()
         {
             InitializeComponent();
 
             farmer_id_daily.KeyPress += obj.TextBox_KeyPress2;
+            _str = new StringBuilder("");
         }
+
+        public string QueryString => _str.ToString();
 
         private void id_changed()
         {
@@ -42,75 +47,57 @@ namespace dairy_app_2
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Freport_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void farmer_id_daily_TextChanged(object sender, EventArgs e)
         {
             id_changed();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_gen_Click(object sender, EventArgs e)
         {
-
+            _str.Clear();
+            _str.Append("SELECT ");
             string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
             string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
-      /*      if (chk_6.Checked == false)
+
+            if (chk_6.Checked == true)
+            {
+                _str.Append("* ");
+            }
+            else if (chk_1.Checked == false && chk_2.Checked == false && chk_3.Checked == false && chk_4.Checked == false && chk_5.Checked == false)
             {
                 return;
             }
-      */
-            if(chk_6.Checked == true)
-            {
-                str += "* ";
-            }
             else
             {
-                str += chk_1.Checked ? "milk_litre" : "";
-                str += chk_2.Checked ? ",rate" : "";
-                str += chk_3.Checked ? ",total_t" : "";
-                str += chk_4.Checked ? ",snf" : "";
-                str += chk_5.Checked ? ",fat" : "";
+
+                _str.Append(chk_1.Checked ? "milk_litre" : "");
+                _str.Append(chk_2.Checked ? ",rate" : "");
+                _str.Append(chk_3.Checked ? ",total_t" : "");
+                _str.Append(chk_4.Checked ? ",snf" : "");
+                _str.Append(chk_5.Checked ? ",fat" : "");
 
             }
 
-            str += " FROM daily_record WHERE farmer_id = '" + farmer_id_daily.Text + "'";
-            str += " AND date >= '" + Date1+"'";
-            str += " AND date <= '" + Date2+"'";
+            _str.Append(" FROM daily_record WHERE farmer_id = '" + farmer_id_daily.Text + "'");
+            _str.Append(" AND date >= '" + Date1 + "'");
+            _str.Append(" AND date <= '" + Date2 + "'");
 
 
-            label4.Text = str;
-
-            
+            label4.Text = _str.ToString();
 
 
-            report_farmer f5 = new();
+
+
+            report_farmer f5 = new report_farmer(this);
             f5.Show();
             Visible = false;
-            
+
+
 
         }
-        public String Sttt()
-        {
-            string strr = str;
-            return strr;
-        }
+
 
 
         private void chk_6_CheckedChanged(object sender, EventArgs e)
@@ -137,7 +124,7 @@ namespace dairy_app_2
 
         private void chk_3_CheckedChanged(object sender, EventArgs e)
         {
-
+            check();
         }
 
         private void chk_4_CheckedChanged(object sender, EventArgs e)
@@ -163,14 +150,13 @@ namespace dairy_app_2
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void Freport_Load(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
 
-        }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
