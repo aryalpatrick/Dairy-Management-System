@@ -33,6 +33,7 @@
             dateTimePicker1 = new DateTimePicker();
             label6 = new Label();
             dateTimePicker2 = new DateTimePicker();
+            btn_gen = new Button();
             SuspendLayout();
             // 
             // label1
@@ -55,6 +56,7 @@
             label5.Size = new Size(74, 32);
             label5.TabIndex = 9;
             label5.Text = "From:";
+            label5.Click += label5_Click;
             // 
             // dateTimePicker1
             // 
@@ -76,15 +78,25 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(350, 239);
+            dateTimePicker2.Location = new Point(484, 189);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(200, 23);
             dateTimePicker2.TabIndex = 12;
+            // 
+            // btn_gen
+            // 
+            btn_gen.Location = new Point(331, 303);
+            btn_gen.Name = "btn_gen";
+            btn_gen.Size = new Size(75, 23);
+            btn_gen.TabIndex = 19;
+            btn_gen.Text = "Generate";
+            btn_gen.UseVisualStyleBackColor = true;
             // 
             // Monthly
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btn_gen);
             Controls.Add(dateTimePicker2);
             Controls.Add(label6);
             Controls.Add(dateTimePicker1);
@@ -103,5 +115,6 @@
         private DateTimePicker dateTimePicker1;
         private Label label6;
         private DateTimePicker dateTimePicker2;
+        private Button btn_gen;
     }
 }
