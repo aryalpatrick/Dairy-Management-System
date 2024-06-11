@@ -70,5 +70,20 @@ namespace dairy_app_2
             conn.Close();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap print_bitmap = new Bitmap(dataGridView1.Width, dataGridView1.Height);
+            dataGridView1.DrawToBitmap(print_bitmap, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
+            e.Graphics.DrawImage(print_bitmap, 0, 0);
+        }
     }
 }
