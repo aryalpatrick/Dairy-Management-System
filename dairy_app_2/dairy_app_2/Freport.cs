@@ -85,7 +85,7 @@ namespace dairy_app_2
             _str.Append(" AND date <= '" + Date2 + "'");
 
 
-            label4.Text = _str.ToString();
+            
 
 
 

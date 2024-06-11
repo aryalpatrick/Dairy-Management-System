@@ -70,3 +70,4 @@ C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Report.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Freport.resources
 C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.Monthly.resources
+C:\Users\thekakunte\Documents\GitHub\Dairy-Management-System--C--.NET-\dairy_app_2\dairy_app_2\obj\Debug\net7.0-windows\dairy_app_2.All_report.resources

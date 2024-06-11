@@ -91,6 +91,7 @@
             btn_gen.TabIndex = 19;
             btn_gen.Text = "Generate";
             btn_gen.UseVisualStyleBackColor = true;
+            btn_gen.Click += btn_gen_Click;
             // 
             // Monthly
             // 
