@@ -6,9 +6,9 @@ namespace dairy_app_2
 {
     public partial class report_farmer : Form
     {
-        private readonly Freport fobj;
+        private readonly Monthly fobj;
 
-        public report_farmer(Freport freport)
+        public report_farmer(Monthly freport)
         {
             InitializeComponent();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
