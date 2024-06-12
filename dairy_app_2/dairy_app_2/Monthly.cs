@@ -31,21 +31,9 @@ namespace dairy_app_2
             _str.Clear();
             string Date1 = dateTimePicker1.Value.ToString("yyyy-MM-dd ");
             string Date2 = dateTimePicker2.Value.ToString("yyyy-MM-dd ");
-            _str.Append(@"
-        SELECT
-            dr.farmer_id,
-            fd.name,
-            SUM(dr.milk_litre) AS total_milk_litre,
-            AVG(dr.rate) AS average_rate,
-            SUM(dr.total_t) AS total_amount
-        FROM
-            daily_records dr
-        JOIN
-            farmers_detail fd ON dr.farmer_id = fd.farmer_id
-        WHERE
-            dr.date BETWEEN "+@Date1+" AND "+@Date2+"
-        @"GROUP BY
-            dr.farmer_id, fd.name;");
+            _str.Append("SELECT farmer_id, SUM(milk_litre) AS t_m_l " +
+                "FROM daily_record" +
+                "GROUP BY farmer_id;");
 
             report_farmer f5 = new report_farmer(this);
             f5.Show();
