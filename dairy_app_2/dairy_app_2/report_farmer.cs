@@ -14,6 +14,7 @@ namespace dairy_app_2
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             fobj = freport;
+            
 
 
         }
