@@ -85,14 +85,14 @@ namespace dairy_app_2
             _str.Append(" AND date <= '" + Date2 + "'");
 
 
-            
 
 
 
 
-        //    report_farmer f5 = new report_farmer(this);
-        //    f5.Show();
-        //    Visible = false;
+
+            //    report_farmer f5 = new report_farmer(this);
+            //    f5.Show();
+            //    Visible = false;
 
 
 
